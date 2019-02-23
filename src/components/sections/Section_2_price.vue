@@ -4,8 +4,10 @@
     <v-flex class="text-xs-center display-2 pb-3 font-weight-thin font-italic" dark ><h3 class="white--text">Наш прайс-лист!</h3></v-flex>
 
     <v-layout align-start justify-center row wrap>
-      <v-card tile class="pl-2 pt-2 mr-2" color="rgb(0, 188, 212, 0.3)" dark>
-        <h2>Техническое обслуживание</h2>
+      <v-card tile class="pl-2 pt-2 mr-2 mt-2" color="rgb(0, 188, 212, 0.3)" dark>
+        <v-flex text-xs-center>
+        <h2 style="color:gray;">Техническое обслуживание</h2>
+        </v-flex>
         <v-layout align-center row v-for="list in lists" v-bind:key="list[0]">
           <v-flex xs8>{{list[0]}}</v-flex>
           <v-flex xs3>
@@ -15,8 +17,10 @@
       </v-card>
 
       <v-card class="pl-2 pr-2 pt-2 ml-2 mt-2 mr-2" color="rgb(0, 188, 212, 0.3)" dark>
-        <h2>Ремонт и обслуживание передней и</h2>
-        <h2>задней подвески и ходовой части</h2>
+        <v-flex text-xs-center>
+          <h2 style="color:gray;">Ремонт и обслуживание передней и</h2>
+          <h2 style="color:gray;">задней подвески и ходовой части</h2>
+        </v-flex>
         <v-layout align-center row v-for="list in lists2" v-bind:key="list[0]">
           <v-flex xs8>{{list[0]}}</v-flex>
           <v-flex xs3>

@@ -2,7 +2,6 @@
   <v-container fluid row ma-0 pa-0 class="sect pt-5 pb-5" style="background: url('static/background.png') repeat;" id="section3">
 
     <v-flex class="text-xs-center display-2 pb-3 font-weight-thin font-italic" dark ><h3 class="white--text">Наши преимущества</h3></v-flex>
-
     <v-layout align-start justify-center row wrap>
       <v-card dark style="height:222px;" class="text-xs-center mx-2 my-2 px-2 py-2" color="rgb(0, 0, 0, 0.3)" v-for="list in lists" v-bind:key="list[0]">
         <v-icon x-large>{{list[1]}}</v-icon>
@@ -17,11 +16,23 @@
         </p>
       </v-card>
     </v-layout>
+
+    <v-layout justify-center mt-4>
+      <v-flex xs11 md10 xl8>
+       <stages-of-work>
+       </stages-of-work>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
+import stagesOfWork from '@/components/sections/fragments/3_stagesOfWork'
+
 export default {
+  components: {
+    stagesOfWork
+  },
   name: 'Section_1_header',
   data () {
     return {
